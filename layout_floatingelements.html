@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>floating elements layout</title>
+    <!-- another way of positioning elements and for create layout not the best one out there-->
+    <style>
+      body {
+        margin: 10px;
+      }
+      .tweet {
+        border: 3px solid gray;
+        /* this is a parent element by default parent elements will not see floated elements
+        if we comment the 1st and 2nd p element this parent element will collaps */
+      }
+      .clearfix::after {
+        /* this is a psudo element,naming it to clearfix will make it more reusable */
+        content: ""; /* this will insert a blank inline elemnt at the end of the border */
+        display: block; /* this is to convert that inline element to a block level element for occuping the entire width of the screen.*/
+        clear: both;
+        /* this is only to solve a layout issues */
+        /* if we remove 1st and 2nd paragraph that will result in collapsing of the box border because the border element(parent)
+        will not recogonize the float element. so to overcome that we have to use this.*/
+      }
+      .avatar {
+        width: 5rem;
+        height: 5rem;
+        background-color: gold;
+        float: left; /* this will float the avatar element to the left and all the subsiquent elements along with it */
+        /* when ever using float be sure to use clear otherwise we will run in to some weired layout issues */
+        /* using flexbox or grid is recomented than using float nowadays */
+        margin-right: 1rem; /* this will give some space between the float element (box) and p element */
+      }
+      .clear {
+        clear: both; /* this is to push the 2nd p to the left of the screen, putting clear property to both is a good practice */
+      }
+    </style>
+  </head>
+  <body>
+    <article class="tweet clearfix">
+      <div class="avatar"></div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <!-- p is a block level element -->
+      <p class="clear">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo
+        aperiam, praesentium reiciendis tenetur ratione consequatur modi quaerat
+        harum dolore tempora, nisi accusamus at numquam officia assumenda omnis
+        rem illo alias quidem! Aliquid similique officiis quasi. Iure nihil
+        velit recusandae molestiae, facilis omnis, quisquam, culpa earum
+        pariatur odit officia odio?
+      </p>
+      <!-- this will result in the text floating around the box or avatar element because of the float elelments presents without a psudo element -->
+    </article>
+  </body>
+</html>

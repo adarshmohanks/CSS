@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>psudo class</title>
+    <style>
+      body {
+        margin: 10px;
+      }
+      article:first-child {
+        font-style: bold;
+      }
+      /*matches a specified element that is the first child of another element*/
+      article p:first-of-type {
+        font-style: italic;
+      }
+      article p:last-of-type {
+        font-weight: bold;
+      }
+      ul li:nth-child(odd) {
+        color: darkmagenta;
+      }
+      a:visited {
+        color: black;
+      }
+      /*to show the visited links*/
+      a:link {
+        color: darkred;
+      }
+      /*to give the link a color*/
+      a:hover,
+      a:focus {
+        color: blue;
+      }
+      /*to give the link a color when hovered over*/
+    </style>
+  </head>
+  <body>
+    <article>
+      <h2>heading</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <a href="https://website.com">link</a>
+      <ul>
+        <li>i1</li>
+        <li>i2</li>
+        <li>i3</li>
+        <li>i4</li>
+      </ul>
+    </article>
+  </body>
+</html>

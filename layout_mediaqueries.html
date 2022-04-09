@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>media queries layout</title>
+    <!-- media queries are used for providing different styles for different devices depending on their features such as screen size , orintation and so on. -->
+    <!-- responsive design -->
+    <!-- break points are points where the website content responds according to the device width, allowing you to show the best possible layout to the user.
+        CSS breakpoints are also called media query breakpoints.-->
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .box {
+        background: gold;
+        padding: 1rem;
+      }
+      .box:nth-of-type(2)/* this is a psudo class selector */ {
+        background-color: dodgerblue;
+      }
+      @media screen and (min-width: 600px) /* screen is the type here,
+        if the conditions/queries are true then these changes will be applied like if stmt*/ {
+        .container {
+          flex-direction: row;
+        }
+
+        @media screen and (min-width: 900px) {
+          .container {
+            flex-direction: row; /* if this media querie is true then the previously defined flex direction will get over written by this stmt */
+          }
+          .box {
+            background-color: palevioletred;
+          }
+          @media print {
+            body {
+              font-size: 12pt; /* this is an absolute unit for printers,it is ideal to use absolute units when using print */
+            }
+            .box {
+              padding: 0.5cm;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, id!
+          Illo autem quia, sequi, dolorum, necessitatibus exercitationem
+          voluptatem nostrum explicabo eaque illum ipsa nisi iste in. Rem,
+          harum. Id, cumque.
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+          accusantium necessitatibus consequatur vel consectetur quae nihil nam
+          dolorum nesciunt sint. Rem in corporis at laboriosam cum vitae
+          perspiciatis expedita facere.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

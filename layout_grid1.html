@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid layout1</title>
+    <!-- grid is used to layout contents in both rows and columns (2D) like a photo galary-->
+    <style>
+      /* aligning items
+      justify-items (along the horizondal axis) 
+      align-items (along the vertical axis) 
+      justify-content (this is to align the grid horizondaly in its container)
+      align-content (this is to vertically align the grid in its continer) */
+
+      .continer {
+        display: grid;
+        /* 3x2(RxC) */
+        grid-template-rows: 100px 100px 100px; /* this is to define the number and size of a row */
+        /* insted of giving these values as 100px 3 times, we can use a repeat function as shown below  */
+        grid-template-columns: repeat(2, 100px);
+        /* this is to define the number and size of a column using repeat fn. this will help in changing the values much easier*/
+        /* grid-template: repeat(3, 100px) / repeat(2, 100px);
+        this cmd is the shortform of the both above cmds.
+        here in this single cmd we can specify the no of rows and its size / no of columns and its size respectively */
+        border: 3px solid lightgray;
+
+        justify-items: center; /* this will horizondaly center the element inside the grid */
+        align-items: center; /* this will vertically center the elements inside the grid */
+        /* justify-items, align-items default values are stretch. that means if we didnt specify the exact values to the grid elements,
+        the elements will automatically stretch to occupy the maximum amount of space available inside a grid cell */
+        justify-content: center; /* for horizondally centering the grid inside its parent container */
+        align-content: center; /* this is to align the grid as vertically centered */
+        height: 100vh; /* this is just to showcase the vertical alignment of the grid */
+      }
+      .box {
+        width: 5rem;
+        height: 5rem;
+        background: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="continer">
+      <div class="box">a</div>
+      <div class="box">b</div>
+      <div class="box">c</div>
+      <div class="box">d</div>
+    </div>
+  </body>
+</html>

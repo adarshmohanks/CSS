@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resolution switching images</title>
+    <!-- while switching between various devices the screen resolution may vary drastically, to resolve this problem we have to provide 3 different sizes of the same image.
+    and let the browser pick the best img for the situation according to the resolution and pixel dencity of the screen.-->
+   <!--  <style>
+      .meal {
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="images\meal.jpg"
+      alt="meal"
+      class="meal"
+      scrset="
+      images\meal.jpg 400w,
+      images\meal@2x.jpg 800w,
+      images\meal@3x.jpg 1200w
+           "
+      sizes="
+           (max-width: 250px) 100vw,
+           (max-width: 600px) 50vw,
+           33vw
+           "
+    /> -->
+    <picture>
+      <source
+        media="(max-width: 300px)"
+        srcset="../CSS/images/meal.jpg " 
+       style="width: 100%;"/>
+
+      <source
+      media="(max-width: 500px)" 
+      srcset="../CSS/images/meal@2x.jpg" 
+      style="width: 50%;"/>
+
+      <source
+      media="(min-width: 501px)" 
+      srcset="../CSS/images/meal@3x.jpg "
+      style="width: 33%;" />
+
+      <img src="../CSS/images/meal.jpg" alt="meal"
+      
+      />
+    </picture>
+
+    <!--with this attribute we can provide a set of high quality versions of the same img for different density screens.-->
+  </body>
+</html>

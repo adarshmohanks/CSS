@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embbedding fonts typography</title>
+    <style>
+      /* refer lesson 17 */
+      @font-face {
+        font-family: "opensans"; /* simplified name */
+        src: url("E:\code\CSS\Font\opensans-regular-webfont.woff2") /* url */
+            format("woff2"),
+          url("E:\code\CSS\Font\opensans-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "opensans";
+        src: url("E:\code\CSS\Font\opensans-bold-webfont.woff2") format("woff2"),
+          url("E:\code\CSS\Font\opensans-bold-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: normal;
+      }
+      p {
+        font-family: "opensans", Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+      incidunt nam quae consequuntur aliquam quisquam suscipit inventore vitae
+      nulla optio quis ex quidem sunt, natus harum perspiciatis! Consequuntur,
+      facilis numquam!
+    </p>
+  </body>
+</html>

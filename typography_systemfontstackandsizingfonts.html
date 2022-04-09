@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>system font stack and sizing fonts typography</title>
+    <!-- system font stack
+    this stack tells the browser to use the default font in the OS of the users computer
+    benifits: can boost performance, gives a native look, no flash of unstyled text (FOUT), overall better experience 
+    problems: the default font in every OS is different-->
+    <!-- use typescale.com for finding the ideal size of various fonts -->
+    <style>
+      html {
+        font-size: 16px; /* this is the default font size of this element this is for sizing the rem value of font size 
+        setting the font size to 16px in the code is not a good practice, if we do so this will prevent the browser from changing it. */
+      }
+      body {
+        margin: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 1rem; /* 1 X size of the html element (relative unit and best practice) */
+      }
+      h1 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 2rem;
+      }
+      @media screen and (min-width: 600px) {
+        html {
+          font-size: 140%; /* if the min width is greater than 600px then the font size will increase by 140% */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+      doloribus nulla, modi nesciunt illum quo, corrupti possimus, sapiente
+      obcaecati doloremque ducimus quibusdam quidem fugiat beatae sed tempore
+      aliquam repudiandae quam rem aut pariatur distinctio iure impedit. Cumque
+      repellat, sunt consectetur, eum harum minus aliquam quibusdam in
+      necessitatibus excepturi quos eos!
+    </p>
+  </body>
+</html>

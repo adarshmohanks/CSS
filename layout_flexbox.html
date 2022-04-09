@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox layout</title>
+    <!-- flexible box layout is used for laying out elemenets in one direction. this is better and powerfull than float-->
+    <style>
+      /* axis (main(primary),cross(secondary))
+      in flex there are two axis that depends upon the flex direction -
+      flex direction row- main axis is horizondal,cross axis is vertical.
+      flex direction column- main axis is vertical,cross axis is horizondal 
+      using these axis we can simply align items inside their continers.*/
+
+      /* aligning items
+      justify-content(along main axis)
+      align-item(along cross axis)
+      align-content(this is used to align multiple lines of boxes at once)*/
+
+      /* sizing items
+      applied on flex items not in flex containers.
+      flex-basis(the inital size of a flex item)
+      flex-grow(for setting the growth factor)
+      flex-shrink(for setting the shrink factor)
+      flex-(shorthand property which combains all the above 3 properties)*/
+
+      body {
+        margin: 10px;
+      }
+      .container {
+        border: 3px solid lightgrey;
+        display: flex; /* mainly used in nav bars, this will position the elements horizondally or vertically*/
+        flex-direction: row; /* mainly used for determining the direction of the flex */
+        justify-content: center; /* this will center the items */
+        align-items: flex-start; /* to specify where to align */
+        height: 90vh; /* this is to expand the flex box so that we can see align-item property */
+        flex-wrap: wrap; /* this is to allow the over populated boxes in a line to move to a new line if needed */
+        align-content: center; /* this is used to align multiple lines of boxes */
+      }
+      .box {
+        flex-basis: auto; /* similar to width. to set the size of a flex box in accordance with the amount of contents in it, the value is auto by default */
+        flex-grow: 1; /* this determines the amount of growth,whith this we can allow items to grow and take up the available space evenly*/
+        flex-shrink: 1; /* this tells the browser how to shrink and fit in these boxes if there is not enough space and the shrinking will happen equally to all boxes */
+        /* flex: 1 1 15rem 
+        if you supply a single value that will be used as flex-grow
+        if you supply 2 values the second value can either be flex-shrink or flex-basis
+        this is determined by, only the flex-basis has a unit next to the number,
+        if there is no unit in the second value it will be flex-shrink and viceversa*/
+        width: 5rem;
+        height: 5rem;
+        background: gold;
+        margin: 1rem;
+      }
+      .one {
+        align-self: flex-end; /* this cmd will not work with flex-wrap and align-content property. this is to align the only box one to a specefic position */
+        flex-basis: 10rem; /* this is to make the box one size property to 10 */
+        flex-shrink: 1; /* this will shirink the box */
+        flex-grow: 1; /* this is to make the box one grow */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box one">a</div>
+      <!-- a class inside another class -->
+      <div class="box">b</div>
+      <div class="box">c</div>
+      <div class="box">d</div>
+      <div class="box">e</div>
+      <div class="box">f</div>
+      <div class="box">g</div>
+      <div class="box">f</div>
+      <!-- without flex wrap property the flex box will try to fit all these boxes in the flex container even if it results in the changing of box shape -->
+    </div>
+  </body>
+</html>

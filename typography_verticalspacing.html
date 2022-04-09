@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vertical spacing of text typography</title>
+    <!-- law of proximity
+    objects that are close to each other are perceived to be related.
+    so we have to follow this rule, the heading and its content should be closer to each other and the heading should be far from the ending of another p-->
+    <style>
+      body {
+        margin: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 1rem;
+        line-height: 1.5; /* distance btwn 2 lines, if we dont supply a unit to this value the browser will multiply this value to the font size and 
+        give a consistant line ht even if the font size changes */
+      }
+      h1 {
+        margin: 3rem 0 1rem; /* trbl */
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+      obcaecati cupiditate, quae ipsa iste porro repellendus maxime veniam
+      tenetur quibusdam repellat labore nulla asperiores, nobis recusandae
+      dolorem odio? Nisi, corporis deserunt quas quia similique voluptatem.
+      Voluptatum eius, illum, alias natus impedit, enim repellat quidem
+      praesentium veniam amet harum distinctio! Repellendus.
+    </p>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+      obcaecati cupiditate, quae ipsa iste porro repellendus maxime veniam
+      tenetur quibusdam repellat labore nulla asperiores, nobis recusandae
+      dolorem odio? Nisi, corporis deserunt quas quia similique voluptatem.
+      Voluptatum eius, illum, alias natus impedit, enim repellat quidem
+      praesentium veniam amet harum distinctio! Repellendus.
+    </p>
+  </body>
+</html>

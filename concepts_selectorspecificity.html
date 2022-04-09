@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selector specificity= weight</title>
+    <!--when we try to give 2 values for an element then the browser will select the more specific one and will apply it-->
+    <style>
+      h1 {
+        color: brown;
+      }
+      .highlight {
+        color: lawngreen;
+      }
+      /*id>class>element*/
+      /*in here the browser will pick the green color because  it is more specific*/
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1 class="highlight">heading</h1>
+    </article>
+  </body>
+</html>

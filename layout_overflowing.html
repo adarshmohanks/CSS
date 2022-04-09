@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow layout</title>
+    <!-- it happens when a continer cannot fit in the entire content inside it. -->
+    <style>
+      .box {
+        border: 3px solid gold;
+        width: 150px;
+        height: 150px;
+        overflow: auto; /* this will give the overflow text a scrolling option only if it is needed*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic delectus
+        dignissimos iste repudiandae nostrum quasi aperiam sapiente consequatur
+        asperiores inventore sed, illum itaque, aut molestiae odit, tempora
+        beatae omnis aliquam rem veritatis accusamus ipsum velit? Perferendis
+        eveniet, maxime dolore repudiandae saepe incidunt commodi autem velit
+        aperiam quia veniam consequatur nihil.
+      </p>
+      <!-- this will result in overflow -->
+    </div>
+  </body>
+</html>

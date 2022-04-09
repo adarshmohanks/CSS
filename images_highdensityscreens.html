@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>high density screens images</title>
+    <!-- physical resolution: the no of pixels in the screen.
+    logical resolution: how they behave css is always based on logical res.
+    device pixel ratio (DPR): ratio btween physical to logical pixels.
+    DPR>1 = high density screen.
+    DPR3X= 1200X1200px
+    DPR2X= 800X800px
+    DPR1X= 400X400px -->
+    <style>
+      .meal {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="../CSS/images/meal.jpg"
+      alt="bowl"
+      class="meal"
+      scrset="../CSS/images/meal.jpg 1x,
+              ../CSS/images/meal@2x.jpg 2x,
+              ../CSS/images/meal@3x.jpg 3x"
+    /><!--with this attribute we can provide a set of high quality versions of the same img for different density screens.-->
+  </body>
+</html>

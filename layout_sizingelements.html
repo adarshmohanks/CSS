@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sizing elements layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        /* * is a universal selector helps in choosing any elements within the HTML page  */
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: gold; /*using only these three lines the box shown above will be smaller*/
+        padding: 20px;
+        border: 10px solid orange; /*by default the width and height properties are applied to the content box,any extra border or padding we apply will increase the size of the box*/
+        box-sizing: border-box; /* this line will give the width and the ht above specified to all elements (contentbox,padding,border).which means that not only
+                                   the content area will get the wd and ht value it will be subdivided for all 3 boxes */
+        display: inline-block; /* inline elements like spans will not obay the width and the height property, this cmd is used for giving those elements those properties. */
+      } /* by default the width and height properties are applied only for the content box,any padding or border we apply will increase the visible box */
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <span class="box"></span>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>styling fonts topography</title>
+    <!-- web safe fonts are
+    Arial 
+    Helvetica
+    Georgia
+    Times New Roman -->
+    <style>
+      p {
+        font-family: Arial, Helvetica, sans-serif; /* this is a font stack which consists of many fonts.
+            this stack checks if the first font in the stack is installed in the users computer,
+            if not it will check the next font in the stack, which ever font is available is going to be applied.
+            last name in the stack will be a generic name so that the browser can use it to chose the ideal font */
+        font-weight: 100; /* this is used for setting up the bolsness of the fonts */
+        font-style: italic;
+        font-size: 1rem;
+        color: #222; /*this is a hex value for the color. usualy the hex value has 6-digits but if the first and second 3-digits are the same,we only have to use the first 3-digits */
+      }
+      h1 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum vel, quae
+      laboriosam reiciendis minima facere cum voluptatem dolorum ducimus
+      possimus, aperiam autem consequuntur sit libero velit. Sunt, ex expedita!
+      Magnam Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
+      cum inventore eum cupiditate iure, in expedita nam et suscipit fugit natus
+      perspiciatis aliquam aut, doloribus mollitia doloremque libero quos velit?
+    </p>
+    <a href="#">link</a
+    ><!-- here this link text will have another font so to solve this we have to style the a tag seperatly in the stylesheet, this will result in duplication of codes and that is not ideal,
+    so we can use inheritance in css, we can apply the font style to the body element and let other elelments inside body inherit it. -->
+  </body>
+</html>

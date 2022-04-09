@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flash of unstyled text (FOUT) typography</title>
+    <style>
+      /* while using a custom font the browser will require time for downloading and applying the font,
+        for this short interval of time the browser will use a backup (unstyled) font*/
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 1rem;
+        color: #222;
+      }
+      h1 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      @font-face {
+        font-family: "opensans"; /* simplified name */
+        src: url("E:\code\CSS\Font\opensans-regular-webfont.woff2") /* url */
+            format("woff2"),
+          url("E:\code\CSS\Font\opensans-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        /*  font-display: fallback; this will tell the browser to use a fallback font and this will give the browser a short window to download the custom font */
+        font-display: optional; /* with optional we are telling the browser that this font is opetional not critical, the browser will give a short window to download and use this font,
+        if it is not downloaded the bowswer is not going to show the font , but in the background it will download and store the font in its cache and in the subsiquent page loads,
+        the bowser will use this font from its cache. so with this the user is never going to notice any major layout change. */
+      }
+
+      @font-face {
+        font-family: "opensans";
+        src: url("E:\code\CSS\Font\opensans-bold-webfont.woff2") format("woff2"),
+          url("E:\code\CSS\Font\opensans-bold-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: normal;
+      }
+      p {
+        font-family: "opensans", Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+      incidunt nam quae consequuntur aliquam quisquam suscipit inventore vitae
+      nulla optio quis ex quidem sunt, natus harum perspiciatis! Consequuntur,
+      facilis numquam!
+    </p>
+  </body>
+</html>

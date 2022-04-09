@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background images</title>
+    <style>
+      body {
+        background: url(../CSS/images/bg-sanfrancisco.jpg); /* this will result in repetation of this same img horizondally and vertically*/
+        background-repeat: no-repeat; /* this will end the repetation of img, we can use the value -x/-y along with repeat cmd for repeating only in either x or y axis */
+        /*background-position: 100px 100px; (R,D) by default the position of an img will be at the top most corner of the screen we can use this cmd to adjust it,
+        we can also use % as the units for positoning the bg img as we need*/
+        /* background-size: 400px 400px; (W,H) we can also use % values, */
+        background-size: cover; /* this will cover our entire container while keeping its aspect ratio  */
+        background-attachment: fixed; /* even if the view port is very larger than the img using this cmd will fix the img at the best size (100vh) and increase the vp size.
+        so that the img doesnt have to be zoomed in for the entire vp resulting in loss of clarity */
+        height: 300vh; /* this will increase the height of the view port by 3x just for showcasing the "background-attachment: fixed;" property*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heading</h1>
+  </body>
+</html>

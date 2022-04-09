@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>styling form forms</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        line-height: 1.5; /* for distancing lines */
+        padding: 1rem; /* for making space btwn the form and screen border */
+      }
+      label {
+        display: block; /* for making the label occupy an entire line */
+      }
+      input[type="text"],
+      input[type="email"] {
+        border: 1px solid #ccc; /* giving border to the email and text field */
+        border-radius: 5px; /* for the curves */
+        padding: 0.5rem 0.7rem; /* for making a consistant gap btwn the box and the contents inside the box */
+        transition: border-color 1s, box-shadow 0.25s; /* to give a transition to the border-color and the box-shadow */
+      }
+      input[type="text"]:focus,/* these lines of codes activates if the field is selected */
+        input[type="email"]:focus {
+        border-color: lightskyblue;
+        outline: 0;
+        box-shadow: 0 0 0 4px rgba(24, 117, 255, 0.25);
+        /*  h,v,blur,spread,clr   */
+      }
+      button {
+        background: rgb(56, 56, 219);
+        color: white;
+        border: 0;
+        padding: 0.5rem 0.7rem;
+        border-radius: 5px;
+        outline: 0;
+      }
+      button:focus {
+        background: rgb(0, 0, 158);
+      }
+      .form-group {
+        margin-bottom: 1rem; /* to implement the law of proximity */
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </form>
+  </body>
+</html>

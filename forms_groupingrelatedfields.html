@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grouping related files forms</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <!-- some dev use section element insted of fieldset, its a valid approach -->
+        <legend>Billing Address</legend>
+        <!-- some dev use h2 insted of legend, its a valid approach -->
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </fieldset>
+      <fieldset>
+        <legend>Payment Address</legend>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </fieldset>
+    </form>
+  </body>
+</html>

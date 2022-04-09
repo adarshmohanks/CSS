@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hiding elements layout</title>
+    <style>
+      .first {
+        display: none; /* the first paragraph will disapear and the space allocated for it will be re-allocated for other elements */
+        visibility: hidden; /* this will hide the first paragraph but its allocated space will not be re-allocated */
+      }
+    </style>
+  </head>
+  <body>
+    <p class="first">first</p>
+    <p>second</p>
+  </body>
+</html>

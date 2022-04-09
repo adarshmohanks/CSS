@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mesurements layout</title>
+    <!-- there are two types of measurements in css absolute and relative. -->
+    <!-- absolute consists of px,pt,in,cm,mm -->
+    <!-- relative consists of %-relative to the size of the continer| vw,vh-relative to the viewport| em,rem-relative to the font size -->
+    <style>
+      html {
+        font-size: 62.5%; /* 62.5 of 16px = 10px */
+        /* this technic is used for making calculations easier */
+      }
+      body {
+        /* this body element is the parent element to all divs so the will use body for relative measurements */
+        margin: 10px;
+        width: 300px; /* just for showing relative measurements working */
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        border-top: 3px solid red;
+        /* this is an absolute value because regerdless of your screen resolution the box will always take 100x100px in the screen */
+      }
+      .box1 {
+        width: 50%; /* this means 50% of the width of the parent element */
+        height: 100px;
+        background-color: blue;
+        border-top: 3px solid red;
+        /* with this relative measurement when the browser window gets resized the box will also get resized if there is no specific width or height specified in the body*/
+        /* vh(viewport height)- used to give height to an element as the _% of viewable ht of the screen and it is a relative unit. eg: height: 100vh; */
+        /* vw(viewport width)- used to give width to an element as the _% of viewable wd of the screen and it is a relative unit. eg: width: 50vw; */
+        /* em-this is reletive to the font size (if the box becomes bigger we want the font size to increase as well) eg: if we give width: 10em;
+        that means the width will be 10 times the size of parent element, if you didnt specify any particular value for width in parent class the default width (16px) will be taken*/
+        /* rem- 10*size of root element (16px) , if the size of the browser font increases the size of the box and font will automatically increase too. */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <br />
+    <div class="box1"></div>
+  </body>
+</html>

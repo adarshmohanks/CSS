@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inheritance</title>
+    <style>
+      p {
+        color: blue;
+        border: 1px solid black;
+      }
+      bold {
+        color: initial; /*here the color from the parent is not inherited by the child*/
+        border: inherit; /*here the border from the parent is forcefully inherited*/
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum <strong>dolor</strong> sit amet.</p>
+    <!--here the strong element inherited the property of its parent element for color-->
+    <p>Lorem ipsum <bold>dolor</bold> sit amet.</p>
+  </body>
+</html>

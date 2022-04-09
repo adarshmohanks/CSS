@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positioning elements layout</title>
+    <style>
+        body{
+            margin: 10px;
+            height: 200vh;/* this will double the viewports ht(just for demonstrating the fixed positioning of box 2 while scrolling) */
+        }
+        .boxes{
+            border: 3px solid lightgray;
+        }
+        .box{
+            width: 5rem;
+            height: 5rem; /* this is a reletive unit that is dependent of the font element */ 
+        }
+        .one{
+            background-color: gold;/* by default the position of an element is static */
+            position: relative;/* this is for changing the position of the element relative to its normal position*/
+            left: 4rem;/* this will move the box to the left side,+ve value means right and viceversa*/
+            bottom: -3rem;/* this cmd will result in overlapping of this box and the box below it. */
+            /* this position element also has right and top properties */
+            z-index: 1;/* this is like an axis which desides which element should be dispayed above or below one while overlapping. */
+        }
+        .two{
+            background-color: tomato;
+            position: fixed;
+            top: 0px;/* this box has an absolute measurement so it is going to stay in this above specified position 
+            eg.can be used for positioning nav bars */
+        }
+        .three{
+            background-color: blue;
+            position: fixed;
+            left: 3rem;
+            right: 3rem;
+            /* in the above 2 lines specifing left and right parameters nothing will happen because we have already sey the box width and ht */
+            width: auto;
+            /* but after applying the width to auto the browser will assign a relative value to the box which will change in accodence with the browser window size */
+        }
+    </style>
+    <!-- relative: relative to the elements normal position -->
+    <!-- absolute: relative to the parent -->
+    <!-- fixed: relative to the viewport -->
+</head>
+<body>
+    <div class="boxes">
+        <div class="box one"></div><!-- here one is the sub class of the class box and two and three respectively -->
+        <div class="box two"></div>
+        <div class="box three"></div><!--each elelment can have multiple classes seperated by a space, this is the way of declaring a class inside another class -->
+    </div>
+</html>

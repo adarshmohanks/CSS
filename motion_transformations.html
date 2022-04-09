@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transformations</title>
+    <!-- functions
+    rotate(): for rotating
+    scale(): for sizing
+    skew(): for tilt
+    translate(): for positioning, this fn uses hardware accleration-->
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+      }
+      .box:hover {
+        transform: rotate(14deg);
+        /* transform: scale (2);
+           transform: skew (15deg);
+           transform: translate(10px, 10px) (hori,vert) ; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. est!
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>list table</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid rgb(0, 0, 0);
+        border-collapse: collapse; /*this is for deleting additional tables*/
+        padding: 5px; /*this code is for giving some space between the border and the element in it*/
+      }
+      tfoot {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>aboutme</li>
+      <li>course</li>
+      <ul>
+        <li>html</li>
+        <li>java</li>
+        <li>css</li>
+      </ul>
+      <li>subscribe</li>
+    </ul>
+    <ol>
+      <li>hi there</li>
+      <li>how are you</li>
+      <li>hope you are doing great</li>
+    </ol>
+    <dl>
+      <dt>html</dt>
+      <dd>its html</dd>
+      <dt>css</dt>
+      <dd>it also has css</dd>
+    </dl>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">expences</th>
+        </tr>
+        <tr>
+          <th>category</th>
+          <th>amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>marketing</td>
+          <td>500rs</td>
+        </tr>
+        <tr>
+          <td>socialmedia</td>
+          <td>200rs</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>total</th>
+          <th>700rs</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

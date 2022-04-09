@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transformations</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background: gold;
+      }
+      .container {
+        perspective: 200px; /*  this will define a perspetive to all its children */
+      }
+      .container:hover .box {
+        transform: perspective(200px) translatez(30px) rotateY(45deg); /* perspetive means how much room is there for movement and translate z means to travel in z axis */
+        transform-origin: 0 50%; /* x offset y offset */
+      }
+      .container:hover .box2 {
+        transform: rotatex(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. est!
+      </div>
+      <div class="box2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. est!
+      </div>
+    </div>
+  </body>
+</html>
