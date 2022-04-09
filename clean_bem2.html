@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM clean</title>
+    <!-- BEM: Block Element Modifier
+    the idea of BEM is to think  our wp as blocks which can be easily modified. a block can contain elements or other blocks-->
+    <!--block: a standalone entitiy that is meaningful on its own.
+        element: a part of a block that has no standalone meaning and is semantically tied to its block
+        modifier: a flag on a block or element. use them to change apperance or behavior -->
+    <style>
+      body {
+        margin: 2rem;
+        display: grid;
+        place-content: centre;
+        height: 100vh;
+        background: rgb(148, 142, 144);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .card {
+        padding: 1rem;
+      }
+
+      .card__img {
+        display: block;
+        height: 100px;
+        width: 100%;
+        background-color: pink;
+      }
+      .card__content {
+        padding: 1.5rem;
+        background: white;
+      }
+      .card__list {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .card__item {
+        padding: 0.3em 0.5em;
+        margin-right: 0.5em;
+        background: rgb(180, 178, 178);
+        border-radius: 0.2em;
+        font-size: 0.85em;
+      }
+      .card__item:hover {
+        background-color: rgb(159, 157, 157);
+      }
+      .card__link {
+        padding: 0.2em 0.3em;
+        background: #2c8973;
+        border-radius: 0.2em;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 0.5em;
+      }
+      .card__link:hover {
+        background-color: #267764;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <span class="card__img"></span>
+      <div class="card__content">
+        <ui class="card__list">
+          <li class="card__item">figma</li>
+          <li class="card__item">xd</li>
+          <li class="card__item">sketch</li>
+        </ui>
+        <p class="card__desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facilis
+          officiis repudiandae amet minima ullam aperiam eligendi voluptates
+          illo eaque earum, sed vel non id inventore autem enim cupiditate
+          minus?
+        </p>
+        <a class="card__link" href="#">visit</a>
+      </div>
+    </div>
+  </body>
+</html>

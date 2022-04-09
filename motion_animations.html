@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animations motion</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.5);
+        }
+        50% {
+          transform: rotate(45deg);
+          background: palevioletred;
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        border-radius: 8px;
+        padding: 1rem;
+        animation-name: pop;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: normal;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode;- this is a all in one cmd */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+    </div>
+  </body>
+</html>
